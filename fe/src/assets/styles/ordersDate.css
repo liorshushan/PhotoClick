@@ -1,0 +1,80 @@
+/* CSS עבור אזור התוכן */
+titleDesign {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem; /* גודל הטקסט */
+  color: #000; /* צבע הטקסט */
+  text-align: left; /* יישור הטקסט משמאל */
+  padding: 20px;
+  gap: 50px; /* מרווח בין האלמנטים (במקום 50cm השתמש ב-px) */
+  position: relative; /* חשוב למיקום מוחלט של רשימת העובדים */
+}
+
+.titleDesign ul {
+  direction: ltr; /* הצגת התוכן משמאל לימין */
+  padding: 0;
+  list-style-type: none; /* מסיר את הסימון של הרשימה */
+}
+
+.titleDesign li {
+  font-size: 1.5rem; /* גודל טקסט לפריטים ברשימה */
+  margin-bottom: 10px; /* רווח בין פריטי הרשימה */
+}
+
+/* עיצוב עבור רשימת העובדים בצד ימין של המסך */
+.workers-list {
+  position: absolute;
+  right: 0; /* מיקום בצד ימין */
+  top: 150px; /* רווח מעל כדי להימנע מהחפיפה עם היומן */
+  width: 300px; /* רוחב של הרשימה */
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 80vh; /* גובה מקסימלי, למנוע גלילה בלתי נגמרת */
+  overflow-y: auto; /* הוספת גלילה אם יש יותר מדי עובדים */
+}
+
+.worker-item {
+  font-size: 1rem;
+  color: #333;
+
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.worker-item:last-child {
+  border-bottom: none;
+}
+
+/* עיצוב עבור קונטיינר של האירועים */
+.event-list {
+  margin-top: 30px; /* רווח מעל רשימת האירועים */
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* לוודא שהרוחב לא יפגע בתצוגה */
+  width: auto; /* רוחב אוטומטי על פי התוכן */
+  display: inline-block; /* מאפשר לתוכן להתאים את עצמו לגובה */
+  margin-bottom: 30px; /* רווח תחתון עבור אוויר בין אלמנטים */
+}
+
+.event-item {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.event-item strong {
+  font-weight: bold;
+}
+
+
+.selectedOrder{
+  max-height: 80px; /* Set the maximum height */
+  max-width: 350px;
+  min-width: 350px;
+  overflow-y: auto;  /* Enable vertical scroll */
+}

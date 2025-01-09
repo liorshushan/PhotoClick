@@ -1,0 +1,37 @@
+.my-orders-number {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.my-orders-number h4 {
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+.my-orders-number h4:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for better UX */
+}
+
+.my-orders-details {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.my-orders-details p {
+  margin: 5px 0;
+}
+
+.my-orders-details h5 {
+  margin: 10px 0 5px;
+}
+
+.my-orders-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.my-orders-details ul li {
+  margin: 5px 0;
+}

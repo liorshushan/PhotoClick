@@ -1,0 +1,11 @@
+.past-order {
+  background-color: rgb(13, 255, 0) !important;
+  color: black !important;
+  border-radius: 50%;
+}
+
+.future-order {
+  background-color: rgb(225, 255, 0) !important;
+  color: rgb(255, 114, 114) !important;
+  border-radius: 50%;
+}

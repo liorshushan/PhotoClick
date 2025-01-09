@@ -1,0 +1,193 @@
+/* כלליות */
+.create-new-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* ממורכז גם על ציר האנכי */
+  width: 100%;
+
+  background-color: #f7f7f7; /* צבע רקע רך */
+  overflow: scroll; /* מניעת גלישה */
+  margin: auto;
+}
+
+/* תוכן הטופס */
+.form-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* שיניתי את הרוחב ל-90% כדי למנוע גלישה */
+  max-width: 1200px; /* הוספתי מקסימום רוחב */
+  padding-top: 30px;
+  box-sizing: border-box;
+  gap: 30px; /* מרווח בין הצדדים */
+}
+
+.products-to-add {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px; /* פינות מעוגלות */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* הצללה עדינה */
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow-y: scroll; /* גלילה אם יש הרבה פריטים */
+  padding: 30px;
+  box-sizing: border-box;
+  gap: 10px; /* מרווח בין הפריטים */
+  text-align: center;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* מרווח בין כפתורים למספר */
+  font-size: 1.3rem; /* גודל טקסט ברור */
+  font-weight: bold; /* מודגש למספר */
+  color: #495057; /* צבע טקסט כהה */
+}
+
+.product-item button {
+  background-color: #6c63ff; /* צבע סגול רך */
+  color: #ffffff; /* צבע טקסט לבן */
+  border: none; /* ללא גבולות */
+  border-radius: 50%; /* כפתור עגול */
+  width: 30px; /* גודל קבוע לכפתור */
+  height: 30px;
+  font-size: 10; /* גודל סימן */
+  text-align: center; /* מרכז המספר */
+}
+
+.product-item button:hover {
+  background-color: #5a54e3; /* סגול כהה יותר */
+  transform: scale(1.1); /* אפקט גידול */
+  align-items: center;
+}
+
+.product-item span {
+  max-width: 50px; /* גודל מינימלי למספר */
+  text-align: center;
+}
+/* הצד הימני - פרטי המוצר */
+.order-details {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 15px;
+  margin-left: 30px;
+  gap: 3px; /* מרווח בין האלמנטים */
+  text-align: center;
+}
+
+/* עיצוב תיבות בחירה */
+select,
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px; /* מרווח בין כל תיבה לתיבה */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14;
+
+  background-color: #f9f9f9; /* צבע רקע רך לתיבות */
+  transition: border-color 0.3s ease-in-out;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  border-color: #a0c4ff; /* צבע עדין כשיש פוקוס */
+  background-color: #ffffff; /* שינוי צבע הרקע */
+}
+
+/* עיצוב כפתורים */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* הוספתי מרווח בין הכפתורים */
+  width: 100%;
+}
+
+.button {
+  padding: 20px 50px; /* הגדלתי את הריווח בתוך הכפתור */
+  background-color: #a0c4ff; /* צבע כחול עדין */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.8rem; /* הגדלתי את גודל הטקסט */
+  text-align: center;
+  cursor: pointer;
+  margin: 0 10px;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #7894e2; /* צבע כחול כהה יותר */
+}
+
+.button.clear {
+  background-color: #2bff00; /* צבע צהוב רך */
+  gap: 25px; /* הוספתי מרווח בין הכפתורים */
+}
+
+.button.clear:hover {
+  background-color: #f1a55b; /* צבע צהוב כהה יותר */
+}
+
+.button.submit {
+  background-color: #90be6d !important; /* ירוק רך */
+  width: 100%;
+}
+
+.button.submit:hover {
+  background-color: #77a45e; /* ירוק כהה יותר */
+}
+/* עיצוב המידע המוצג */
+.total-price {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  background-color: #a0c4ff;
+}
+.title {
+  font-size: 2rem; /* גודל טקסט בולט */
+  font-weight: 600; /* טקסט מודגש */
+  color: #333333; /* צבע כהה לקריאות גבוהה */
+  margin-bottom: 20px; /* מרווח מתחת לכותרת */
+  text-align: center; /* מיישר את הטקסט למרכז */
+  
+  letter-spacing: 1px; /* מרווח בין האותיות */
+  border-bottom: 2px solid #6c63ff; /* קו תחתון סגול */
+  padding-bottom: 10px; /* ריפוד מתחת לכותרת */
+}
+.submit {
+  background-color: #6c63ff; /* סגול רך ונעים */
+  color: #ffffff; /* צבע טקסט לבן */
+  padding: 15 10; /* גודל נוח לכפתור */
+  font-size: 14px; /* גודל טקסט ברור */
+  font-weight: bold; /* טקסט מודגש */
+  border: none; /* מסיר גבולות */
+  margin: 5px 2px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* אפקט עומק */
+  cursor: pointer; /* מצביע יד */
+  font-size: 20px;
+}
+
+.submit:hover {
+  background-color: #5751d7; /* גוון כהה יותר */
+  transform: translateY(-3px); /* כפתור עולה מעט */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* עומק נוסף */
+}
+.submit:active {
+  transform: translateY(0); /* הכפתור חוזר למקומו */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* עומק רגיל */
+}
